@@ -1,0 +1,99 @@
+
+var posicao= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var conteudo=[0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9];
+var estado= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var sorteado;
+var acertos=0
+for(var x=0;x<20;x++){
+    sorteado=Number.parseInt(Math.random()*(20-x));
+    posicao[x]=conteudo[sorteado];
+    conteudo.splice(sorteado,1);
+}
+var bgmodal=window.document.getElementById('bgmodal')
+var titulo=window.document.getElementById('titulo')
+
+var imagem=['imagem0','imagem1','imagem2','imagem3','imagem4','imagem5','imagem6','imagem7','imagem8','imagem9','imagem10'
+            ,'imagem11','imagem12','imagem13','imagem14','imagem15','imagem16','imagem17','imagem18','imagem19','imagem20']
+var imagens=[]
+for(x=0;x<20;x++){
+    imagens[x]=window.document.getElementById(imagem[x])
+}
+for(x=0;x<20;x++){
+    imagens[x].addEventListener('click',e=>{clicar(e)}) 
+}
+var numeros=['zero','um','dois','tres','quatro','cinco','seis','sete','oito','nove','dez']
+window.setInterval(verificar,4000)
+
+function clicar(e){ 
+    verificar()
+    var num
+    for(i=0;i<20;i++){
+        if(e.target.id==imagem[i]){
+            num=Number.parseInt(imagem[i].substr(6,2))
+        }
+    }
+    for(x=0;x<10;x++){
+        if(posicao[num]===x){
+            imagens[num].src="imagens/"+numeros[x]+".png"
+        }
+    }
+    estado[num]=1
+    comparar(num)
+}
+function comparar(atual){
+    for(var x=0;x<20;x++){
+        if(estado[x]===1 && estado[atual]===1 && x!=atual && posicao[x]===posicao[atual]){
+            for(i=0;i<20;i++){
+                if(x===i){
+                    imagens[x].removeEventListener('click',clicar)
+                    estado[x]=0  
+                }
+            }
+            
+            //Atual
+            for(i=0;i<20;i++){
+                if(atual===i){
+                    imagens[x].removeEventListener('click',clicar)
+                    estado[atual]=0 
+                    acertos+=1 
+                }
+            }
+            
+        }
+    }
+    
+    if(acertos==10){
+        bgmodal.style.display='block'
+        titulo.style.textAlign='center'
+    }    
+} 
+function verificar(){
+    for(var x=0;x<20;x++){
+        for(var y=0;y<20;y++){
+            if(estado[x]===1 && estado[y]===1 && x!=y && posicao[x]!=posicao[y]){ 
+                       
+                viraXY(x,y)                                     
+            }    
+        }
+    }
+}
+function viraXY(a,b){
+    viraX(a)
+    viraY(b)
+}
+function viraX(x){
+    for(i=0;i<20;i++){
+       if(x===i){
+            imagens[i].src="imagens/numeros.jpg"  
+            estado[x]=0
+        } 
+    }
+}
+function viraY(y){
+    for(i=0;i<20;i++){
+        if(y===i){
+            imagens[i].src="imagens/numeros.jpg" 
+            estado[y]=0 
+        } 
+    }
+}

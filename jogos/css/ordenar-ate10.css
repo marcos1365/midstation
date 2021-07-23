@@ -1,0 +1,159 @@
+
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+    
+}
+/*COLUNA 1*/
+    div.linha{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+    }
+    div#col1{
+        display: flexbox;
+        background: rgb(179, 122, 104);
+        width: 100%;
+        
+        
+    }
+        div#estrelas{
+            background: burlywood;
+            font-size: 20pt;
+            color: black;
+            height: 40px;
+            display: flex;
+            flex-direction: column; /*Alinhamento vertical*/
+            justify-content: flex-end; /*Alinhamento vertical*/
+            text-align: center; /*Alinhamento vertical*/    
+        }
+        div#imagens{
+            /*height: 110px;*/
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+        div.vagao{
+            margin-left: 5px;
+        }
+        div.numeroVagao{
+            display: flex;
+            justify-content: center;
+            height: 80px;
+            border: solid;
+            margin-top: 10%;
+            margin-bottom: -20%;
+        }
+        div#verificar{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        button#verif{
+            background-color: rgb(130, 171, 248);
+            border-radius: 5px;
+        }
+        div#resultado{
+            height: 130px;
+            text-align: center;
+            
+        }
+        div#respostaCerta{
+            text-align: center;
+
+        }
+        div#numeros{ 
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+        }
+        div#errosAcertos{
+            display: flex;
+            justify-content: space-between;
+            font-size: 10pt;
+        }
+        #erros{margin-left: 2%;}
+        #acertos{margin-right: 2%;}
+
+
+    img#trem{
+        height: 170px;
+    }
+    img.imagens{
+        margin-top: 20px;
+        height: 70px;
+        
+    }
+    img.numeroVagao{
+        margin-top: 15px;
+        height: 60px;
+    }
+    img.resultado{
+        height: 100px;
+        
+    }
+    img.numero{
+        height: 60px;
+        padding-top: 5px;
+    }
+    img.numero:hover{transform: scale(1.2);}
+    @media(max-width:1300px){
+        div#estrelas{font-size: 15pt;height: 30px;}
+        img#trem{height:100px;} 
+        img.imagens{height: 40px;}
+        div.numeroVagao{height: 40px; margin-bottom: -17px; margin-top: 10px;}
+        img.numeroVagao{height: 30px; margin-top: 8px;}
+        img.numero{height: 30px;padding-left: 15px;padding-right: 15px;}
+        section.conteudo{width: 90%;}
+        div#modal{width:80%;}
+        /*img#nove{position: absolute;} */
+    }
+
+    @keyframes trem-chegando {
+        from{
+            transform: translateX(1000px);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+    @keyframes trem-saindo {
+        to{
+            transform: translateX(-1500px);
+        }
+    }    
+    .trem_chegando{
+        animation-name: trem-chegando; 
+        animation-duration: 2s;
+        
+    }
+    .trem_saindo{
+        animation-name: trem-saindo; 
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    
+footer{
+    color: white;
+    text-align: center;
+}

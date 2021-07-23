@@ -1,0 +1,232 @@
+
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+}
+ div#linha{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+    /*COLUNA 1*/
+    div#col1{
+        display: flexbox;
+        background: rgb(179, 122, 104);
+        width: 400px;
+    }
+        div#estrelas{
+            background: burlywood;
+            font-size: 20pt;
+            color: black;
+            height: 40px;
+            display: flex;
+            flex-direction: column; /*Alinhamento vertical*/
+            justify-content: flex-end; /*Alinhamento vertical*/
+            text-align: center; /*Alinhamento vertical*/    
+        }
+        p#doisDigitos{
+            text-align: center;
+            font-size: 10pt;
+        }
+        div#conta{
+            display: flex;
+            /*flex-direction: row; */
+            justify-content: center; 
+            font-size: 30pt;
+            padding-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+            div#contaCol1{
+                display: flex;
+                justify-content: center;
+            }
+
+        div#resposta{
+            text-align: center;
+            padding-top: 3px;
+        }
+            input#resposta{
+                text-align: end;
+                font-size: 30pt;
+                border-radius: 5px;
+                height: 40px;
+                width: 120px;
+            }
+        div#verificar{
+            padding-top: 70px;
+            text-align: center;
+
+        }
+        button#verif{
+            background-color: rgb(130, 171, 248);
+            border-radius: 5px;
+        }
+        div#resultado{
+            padding-top: 10px;
+            text-align: center;
+        }
+        div#respostaCerta{
+            text-align: center;
+        }
+        div#errosAcertos{
+            display: flex;
+            justify-content: space-between;
+            font-size: 10pt;
+            padding-top: 100px;
+            
+        }
+        #erros{margin-left: 2%;}
+        #acertos{margin-right: 2%;}
+    
+/*COLUNA 2*/
+    div#col2{
+       
+        background: rgb(104, 128, 179);
+        width: 400px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+    }
+
+    div.linhaNumeros{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+        div.dividendo{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            
+        }
+        div#divisorCol2{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+           
+        }
+        div.divisor{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+
+        }
+        div.numeros{
+            border: solid rgb(104, 128, 179); 
+            /*border: solid; */
+            width: 25px;
+            height: 45px;
+            font-size: 30pt;
+            text-align: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            
+        }
+        div#traco{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            border-bottom: solid; 
+        }
+        div#traco2{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            border-bottom: solid rgb(104, 128, 179); 
+        }
+        div#contaImg{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            width: 80%;
+            height: 35px;
+            border: solid black;
+            background-color: brown;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div#multiplicacao{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        div#contaImg2{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            width: 10%;
+            height: 35px;
+            border: solid black;
+            background-color: brown;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div#imgNumeros{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            margin-top: 90px;
+        }
+        img.numero{
+            height: 36px;
+            width: 18px;
+            border: solid rgb(104, 128, 179);
+        }
+        div#botao{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            margin-top: 5px;
+        }
+        button#limpar{
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            background-color: rgb(130, 171, 248);
+            border-radius: 5px;
+        }
+
+
+/*Moblile*/
+    @media(max-width:1300px){
+        div#estrelas{font-size: 15pt;height: 30px;} 
+        section.conteudo{width: 90%;}
+        div#modal{width:80%;}
+        div.numeros{
+            
+            width: 20px;
+            height: 35px;
+            font-size: 25pt;
+        }
+        img.numero{
+            height: 30px;
+            width: 15px;
+        }
+        div#imgNumeros{
+            margin-top: 40px;
+        }
+    }
+
+
+footer{
+    color: white;
+    text-align: center;
+}

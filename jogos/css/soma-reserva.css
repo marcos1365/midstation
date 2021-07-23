@@ -1,0 +1,180 @@
+
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+}
+/*COLUNA 1*/
+    div#linha{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    div#col1{
+        display: flexbox;
+        background: rgb(179, 122, 104);
+        width: 400px;
+    }
+        div#estrelas{
+            background: burlywood;
+            font-size: 20pt;
+            color: black;
+            height: 40px;
+            display: flex;
+            flex-direction: column; /*Alinhamento vertical*/
+            justify-content: flex-end; /*Alinhamento vertical*/
+            text-align: center; /*Alinhamento vertical*/    
+        }
+        div#conta{
+            
+            display: flex;
+            /*flex-direction: row; */
+            justify-content: center; 
+            font-size: 40pt;
+            padding-top: 40px;
+
+        }
+            div#contaCol1{
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            div#contaCol1,#contaCol2, #contaCol3{
+                border-bottom: solid;
+            }
+        div#resposta{
+            text-align: center;
+            padding-top: 3px;
+        }
+            input#res{
+                text-align: end;
+                font-size: 35pt;
+                border-radius: 5px;
+                width: 100px;
+            }
+        div#verificar{
+            padding-top: 20px;
+            text-align: center;
+
+        }
+        button#verif{
+            background-color: rgb(130, 171, 248);
+            border-radius: 5px;
+        }
+        div#resultado{
+            padding-top: 20px;
+            text-align: center;
+        }
+        div#respostaCerta{
+            text-align: center;
+        }
+        div#errosAcertos{
+            display: flex;
+            justify-content: space-between;
+            font-size: 10pt;
+            padding-top: 40px;
+            
+        }
+        #erros{margin-left: 2%;}
+        #acertos{margin-right: 2%;}
+    
+/*COLUNA 2*/
+    div#col2{
+        /*display: inline-block;*/
+        background: rgb(104, 128, 179);
+        width: 400px;
+        padding-top: 5px;
+        
+    }
+
+    div.linhaNumeros{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+        div.numeros{
+            /*border: solid;*/
+            width: 50px;
+            height: 90px;
+            /*border-radius: 10%; */
+            /*padding: 4px;*/
+            font-size: 60pt;
+            /*text-align: center;*/
+            color: black;
+        }
+        #a1,#b1,#c1,#d1{display: none;}
+    div#a2{
+        /*border:solid;*/
+        font-size: 20pt;
+        display: flex;
+        flex-direction: column; /*Alinhamento vertical*/
+        justify-content: flex-end; /*Alinhamento vertical*/
+        text-align: center; /*Alinhamento vertical*/
+    }
+    div#c2,#c3,#c4,#c5{
+        border-bottom: solid;
+    }
+    div#d2, #d3, #d4, #d5{ text-align: center;}
+/*Coluna 3*/
+    div#col3{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row ;
+        justify-content: center;
+        background: rgb(77, 133, 77);
+        width: 20%; 
+
+    }
+        div.numero{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    div#botao{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    button#limpar{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        background-color: rgb(130, 171, 248);
+        border-radius: 5px;
+    }
+    img{
+    width: 46px;
+    height: 85px;
+    }    
+    @media(max-width:1300px){
+        div#estrelas{font-size: 15pt;height: 30px;}
+        div#col3{
+            width: auto;
+            max-width: 400px;
+            
+        } 
+        section.conteudo{width: 90%;}
+        div#modal{width:80%;}
+        img{width: 30px; height: 55px;}
+    }
+
+
+footer{
+    color: white;
+    text-align: center;
+}

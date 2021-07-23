@@ -1,0 +1,261 @@
+
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+}
+ div#linha{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+    /*COLUNA 1*/
+    div#col1{
+        display: flexbox;
+        background: rgb(179, 122, 104);
+        width: 400px;
+    }
+        div#estrelas{
+            background: burlywood;
+            font-size: 20pt;
+            color: black;
+            height: 40px;
+            display: flex;
+            flex-direction: column; /*Alinhamento vertical*/
+            justify-content: flex-end; /*Alinhamento vertical*/
+            text-align: center; /*Alinhamento vertical*/    
+        }
+        p#doisDigitos{
+            text-align: center;
+            font-size: 10pt;
+        }
+        div#conta{
+            display: flex;
+            /*flex-direction: row; */
+            justify-content: center; 
+            font-size: 30pt;
+            padding-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+            div#contaCol1{
+                display: flex;
+                justify-content: center;
+            }
+
+        div#resposta{
+            text-align: center;
+            padding-top: 3px;
+        }
+            input#resposta{
+                text-align: end;
+                font-size: 30pt;
+                border-radius: 5px;
+                height: 40px;
+                width: 120px;
+            }
+        div#verificar{
+            padding-top: 70px;
+            text-align: center;
+
+        }
+        button#verif{
+            background-color: rgb(130, 171, 248);
+            border-radius: 5px;
+        }
+        div#resultado{
+            padding-top: 40px;
+            text-align: center;
+        }
+        div#respostaCerta{
+            text-align: center;
+        }
+        div#errosAcertos{
+            display: flex;
+            justify-content: space-between;
+            font-size: 10pt;
+            padding-top: 100px;
+            
+        }
+        #erros{margin-left: 2%;}
+        #acertos{margin-right: 2%;}
+    
+/*COLUNA 2*/
+    div#col2{
+       
+        background: rgb(104, 128, 179);
+        width: 400px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+    }
+
+    div.linhaNumeros{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+        div.dividendo{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            
+        }
+        div#divisorCol2{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            border-left: solid;
+            border-bottom: solid;            
+        }
+        div.divisor{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            border-left: solid rgb(104, 128, 179);
+            border-bottom: solid rgb(104, 128, 179);
+            margin-left: 0px;
+        }
+        div.numeros{
+            border: solid rgb(104, 128, 179);
+            /*border: solid; */
+            width: 15px;
+            height: 35px;
+            font-size: 25pt;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content:center; 
+            
+        }
+        div#imgNumeros{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        img.numero{
+            height: 28px;
+            width: 14px;
+            border: solid rgb(104, 128, 179);
+        }
+        div#botao{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            margin-top: 5px;
+        }
+        button#limpar{
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            background-color: rgb(130, 171, 248);
+            border-radius: 5px;
+        }
+
+/*Coluna 3*/
+div#col3{
+    display: block;
+    background: rgb(77, 133, 77);
+    width: 20%; 
+
+}
+div.col3LinhaNumeros{
+    margin: 0px auto 0px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 80%;
+    height: 50px;
+    
+}
+#linhaA{
+    margin-top: 50px;
+    margin-bottom: -10px;
+}
+#col3b1, #col3c1, #col3d1{
+    margin-right: 5px;
+}
+#col3a1{
+    margin-left: 5px;
+}
+div#imgNumerosCol3{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.numerosCol3{
+    border: solid rgb(77, 133, 77);
+    /*border: solid; */
+    width: 15px;
+    height: 35px;
+    font-size: 25pt;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;   
+    margin-top: 5px;
+}
+#linhaD{
+    margin-bottom: 158px;
+    border-top: solid;
+}   
+
+img.numerosCol3{
+    height: 28px;
+    width: 14px;
+    border: solid rgb(77, 133, 77);
+}
+img.numeroCol3{
+    height: 28px;
+    width: 14px;
+    border: solid rgb(77, 133, 77);
+
+}
+div#botaoCol3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+button#limparCol3{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(130, 171, 248);
+    border-radius: 5px;
+}
+/*Moblile*/
+    @media(max-width:1300px){
+        div#estrelas{font-size: 15pt;height: 30px;}
+        div#col3{
+            /*width: auto;
+            max-width: 400px;*/
+            width: 400px;
+            padding-bottom: 5px;
+        } 
+        section.conteudo{width: 90%;}
+        div#modal{width:80%;}
+        /*img#nove{position: absolute;} */
+    }
+
+
+footer{
+    color: white;
+    text-align: center;
+}

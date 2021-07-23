@@ -1,0 +1,64 @@
+
+/*CORPO*/
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+}
+div.linha{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+}
+div.coluna{    
+    width: 140px;
+}
+@media(max-width:1000px){
+    div.coluna{
+        width: 300px;
+        
+    } 
+}
+
+img.coluna{
+    
+    width:138px;
+    height: 200px; 
+    
+    transition: all 0.5s;
+    cursor: pointer;
+    /*padding-top: 5px;
+    padding-bottom: 5px;*/
+    padding:20px;
+}
+@media(max-width:800px){
+    
+    img{width: 70px; height: 100px;}
+    section.conteudo{width:90%;padding: 5px;}
+    div.coluna{width:70px;}
+    div#modal{width:80%;}
+    /*img.coluna{width: 70px; height: 100px; transition: 2s;}*/
+    img.coluna{width: 35px; height: 50px; transition: 2s; padding: 10px;}
+}
+img.coluna:hover{
+    transform: scale(1.1);           
+}
+footer{
+    color: white;
+    text-align: center;
+}

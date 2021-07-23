@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIVISÃO</title>
+    <link rel="stylesheet" href="css/venceu-modal.css">
+    <link rel="stylesheet" href="css/divisao.css"/>
+    <link rel="stylesheet" href="css/menu-superior.css">
+    <link rel="shortcut icon" href="../imagens/favicon.ico">
+</head>
+<body onload="iniciar()">
+    <div id='bgmodal'>
+        <div id='modal'>
+            <div id="divtitulo"><h2 id="titulo">PARABÉNS! VOCÊ VENCEU! NOTA </h2></div>
+            <div id="imagem"><img id="trofeu" src="imagens/trofeu.png" alt="troféu"></div>
+            <div id="links">
+                <a id="voltar"  href="../index.html"><img class="linkmodal" src="imagens/voltar.png" alt="voltar para o inicio"><p>INICIO</p></a>
+                <a id="atualizar"  href="divisao-quociente-decimal1.html"><img class="linkmodal" src="imagens/atualizar.png" alt="repetir"><p>REFAZER</p></a>
+                <a id="avancar" href="divisao-quociente-decimal2.html"><img class="linkmodal" class="linkmodal" src="imagens/avancar.png" alt="próxima"><p>PRÓXIMA</p></a>
+            </div>
+        </div>
+    </div>
+    <header> 
+        <div id="menu-principal">
+           
+            <div id="menu-esquerda">
+                <h2>  <a href="../index.html">
+                    <div class="mid"><div id="mid">MID</div> STATION</div></a>
+                </h2>
+            </div>
+            <div id="menu-direita">
+                <nav id="menu">
+                   <div class="menu"> 
+                        <div id="ei" class="menu"><a href="#">EDUCAÇÃO INFANTIL</a></div>
+                        <div id="primeiro" class="menu"  ><a href="#">1º ANO</a></div>
+                        <div id="segundo"  class="menu" ><a href="#">2º ANO</a></div>
+                        <div id="terceiro"  class="menu" ><a href="#">3º ANO</a></div>
+                        <div id="quarto"  class="menu" ><a href="#">4º ANO</a></div>
+                        <div id="quinto" class="menu"  ><a href="#">5º ANO</a></div>
+                    
+                   </div>
+                </nav>
+            </div>
+            
+        </div>
+    </header>
+    <p id="descricao">DIVISÃO POR NÚMERO DE 1 DÍGITO COM QUOCIENTE DECIMAL</p>
+    <section class="conteudo">
+        <div id="linha">
+
+            <div id="col1">
+                <div id="estrelas">&#9734;</div>
+                <p id="doisDigitos">USE APENAS 2 DÍGITOS DEPOIS DA VÍRGULA</p>
+                <div id="conta">
+                    <div id="contaCol1">
+                         <div id="dividendo" class="conta">0</div>                       
+                         <div id="sinal" class="conta">&#247;</div>
+                         <div id="divisor" class="conta">0</div>
+                         <div id="igual" class="conta">=</div>
+                         <div id="resultadoConta"><input id="resposta" type="number" min="0" max="999" ></div>                        
+                     </div>
+                </div>
+                <div id="verificar">
+                    <button id="verif">VERIFICAR</button>
+                </div>
+                <div id="resultado">RESULTADO</div>
+                <div id="respostaCerta">&nbsp;</div>
+                <div id="errosAcertos">
+                    <div id="erros">ERROS:</div>
+                    <div id="acertos">ACERTOS:</div>
+                 </div>
+            </div>
+
+            <div id="col2">
+                <div class="linhaNumeros">
+                    <div class="dividendo">
+                    <div id="a0" class="numeros" dropzone="copy"></div>    
+                    <div id="a1" class="numeros" dropzone="copy"></div>
+                    <div id="a2" class="numeros" dropzone="copy"></div>
+                    <div id="a3" class="numeros" dropzone="copy"></div>
+                    <div id="a4" class="numeros" dropzone="copy"></div>
+                    <div id="a5" class="numeros" dropzone="copy"></div>
+                    </div>
+                    <div class="divisor" id="divisorCol2">
+                    <div id="a6" class="numeros" dropzone="copy"></div>
+                    <div id="a7" class="numeros" dropzone="copy"></div>
+                    <div id="a8" class="numeros" dropzone="copy"></div>
+                    <div id="a9" class="numeros" dropzone="copy"></div>
+                    <div id="a10" class="numeros" dropzone="copy"></div>
+                    <div id="a11" class="numeros" dropzone="copy"></div>
+                    </div>
+                </div>
+                <div class="linhaNumeros">
+                    <div class="dividendo">
+                        <div id="b0" class="numeros" dropzone="copy"></div>
+                        <div id="b1" class="numeros" dropzone="copy"></div>
+                        <div id="b2" class="numeros" dropzone="copy"></div>
+                        <div id="b3" class="numeros" dropzone="copy"></div>
+                        <div id="b4" class="numeros" dropzone="copy"></div>
+                        <div id="b5" class="numeros" dropzone="copy"></div>
+                        
+                    </div>
+                    <div class="divisor">
+                        <div id="b6" class="numeros" dropzone="copy"></div>
+                        <div id="b7" class="numeros" dropzone="copy"></div>
+                        <div id="b8" class="numeros" dropzone="copy"></div>
+                        <div id="b9" class="numeros" dropzone="copy"></div>
+                        <div id="b10" class="numeros" dropzone="copy"></div>
+                        <div id="b11" class="numeros" dropzone="copy"></div>
+                    </div>
+                </div>
+                <div class="linhaNumeros">
+                    <div class="dividendo">
+                    <div id="c0" class="numeros" dropzone="copy"></div>    
+                    <div id="c1" class="numeros" dropzone="copy"></div>
+                    <div id="c2" class="numeros" dropzone="copy"></div>
+                    <div id="c3" class="numeros" dropzone="copy"></div>
+                    <div id="c4" class="numeros" dropzone="copy"></div>
+                    <div id="c5" class="numeros" dropzone="copy"></div>
+                    </div>
+                    <div class="divisor">
+                    <div id="c6" class="numeros" dropzone="copy"></div>
+                    <div id="c7" class="numeros" dropzone="copy"></div>
+                    <div id="c8" class="numeros" dropzone="copy"></div>
+                    <div id="c9" class="numeros" dropzone="copy"></div>
+                    <div id="c10" class="numeros" dropzone="copy"></div>
+                    <div id="c11" class="numeros" dropzone="copy"></div>
+                    </div>
+                </div>
+                <div class="linhaNumeros">
+                    <div class="dividendo">
+                        <div id="d0" class="numeros" dropzone="copy"></div>
+                        <div id="d1" class="numeros" dropzone="copy"></div>
+                        <div id="d2" class="numeros" dropzone="copy"></div>
+                        <div id="d3" class="numeros" dropzone="copy"></div>
+                        <div id="d4" class="numeros" dropzone="copy"></div>
+                        <div id="d5" class="numeros" dropzone="copy"></div>
+                        
+                    </div>
+                    <div class="divisor">
+                    <div id="d6" class="numeros" dropzone="copy"></div>
+                    <div id="d7" class="numeros" dropzone="copy"></div>
+                    <div id="d8" class="numeros" dropzone="copy"></div>
+                    <div id="d9" class="numeros" dropzone="copy"></div>
+                    <div id="d10" class="numeros" dropzone="copy"></div>
+                    <div id="d11" class="numeros" dropzone="copy"></div>
+                    </div>
+                </div>
+                <div class="linhaNumeros">
+                    <div class="dividendo">
+                    <div id="e0" class="numeros" dropzone="copy"></div>    
+                    <div id="e1" class="numeros" dropzone="copy"></div>
+                    <div id="e2" class="numeros" dropzone="copy"></div>
+                    <div id="e3" class="numeros" dropzone="copy"></div>
+                    <div id="e4" class="numeros" dropzone="copy"></div>
+                    <div id="e5" class="numeros" dropzone="copy"></div>
+                    </div>
+                    <div class="divisor">
+                    <div id="e6" class="numeros" dropzone="copy"></div>
+                    <div id="e7" class="numeros" dropzone="copy"></div>
+                    <div id="e8" class="numeros" dropzone="copy"></div>
+                    <div id="e9" class="numeros" dropzone="copy"></div>
+                    <div id="e10" class="numeros" dropzone="copy"></div>
+                    <div id="e11" class="numeros" dropzone="copy"></div>
+                    </div>
+                </div>
+                <div class="linhaNumeros">
+                    <div class="dividendo">
+                    <div id="f0" class="numeros" dropzone="copy"></div>    
+                    <div id="f1" class="numeros" dropzone="copy"></div>
+                    <div id="f2" class="numeros" dropzone="copy"></div>
+                    <div id="f3" class="numeros" dropzone="copy"></div>
+                    <div id="f4" class="numeros" dropzone="copy"></div>
+                    <div id="f5" class="numeros" dropzone="copy"></div>
+                    </div>
+                    <div class="divisor">
+                    <div id="f6" class="numeros" dropzone="copy"></div>
+                    <div id="f7" class="numeros" dropzone="copy"></div>
+                    <div id="f8" class="numeros" dropzone="copy"></div>
+                    <div id="f9" class="numeros" dropzone="copy"></div>
+                    <div id="f10" class="numeros" dropzone="copy"></div>
+                    <div id="f11" class="numeros" dropzone="copy"></div>
+                    </div>
+                </div>
+                <div class="linhaNumeros">
+                    <div class="dividendo">
+                    <div id="g0" class="numeros" dropzone="copy"></div>    
+                    <div id="g1" class="numeros" dropzone="copy"></div>
+                    <div id="g2" class="numeros" dropzone="copy"></div>
+                    <div id="g3" class="numeros" dropzone="copy"></div>
+                    <div id="g4" class="numeros" dropzone="copy"></div>
+                    <div id="g5" class="numeros" dropzone="copy"></div>
+                    </div>
+                    <div class="divisor">
+                    <div id="g6" class="numeros" dropzone="copy"></div>
+                    <div id="g7" class="numeros" dropzone="copy"></div>
+                    <div id="g8" class="numeros" dropzone="copy"></div>
+                    <div id="g9" class="numeros" dropzone="copy"></div>
+                    <div id="g10" class="numeros" dropzone="copy"></div>
+                    <div id="g11" class="numeros" dropzone="copy"></div>
+                    </div>
+                </div>
+                <div class="linhaNumeros">
+                    <div class="dividendo">
+                    <div id="h0" class="numeros" dropzone="copy"></div>    
+                    <div id="h1" class="numeros" dropzone="copy"></div>
+                    <div id="h2" class="numeros" dropzone="copy"></div>
+                    <div id="h3" class="numeros" dropzone="copy"></div>
+                    <div id="h4" class="numeros" dropzone="copy"></div>
+                    <div id="h5" class="numeros" dropzone="copy"></div>
+                    </div>
+                    <div class="divisor">
+                    <div id="h6" class="numeros" dropzone="copy"></div>
+                    <div id="h7" class="numeros" dropzone="copy"></div>
+                    <div id="h8" class="numeros" dropzone="copy"></div>
+                    <div id="h9" class="numeros" dropzone="copy"></div>
+                    <div id="h10" class="numeros" dropzone="copy"></div>
+                    <div id="h11" class="numeros" dropzone="copy"></div>
+                    </div>
+                </div>
+                <div class="linhaNumeros">
+                    <div class="dividendo">
+                    <div id="i0" class="numeros" dropzone="copy"></div>    
+                    <div id="i1" class="numeros" dropzone="copy"></div>
+                    <div id="i2" class="numeros" dropzone="copy"></div>
+                    <div id="i3" class="numeros" dropzone="copy"></div>
+                    <div id="i4" class="numeros" dropzone="copy"></div>
+                    <div id="i5" class="numeros" dropzone="copy"></div>
+                    </div>
+                    <div class="divisor">
+                    <div id="i6" class="numeros" dropzone="copy"></div>
+                    <div id="i7" class="numeros" dropzone="copy"></div>
+                    <div id="i8" class="numeros" dropzone="copy"></div>
+                    <div id="i9" class="numeros" dropzone="copy"></div>
+                    <div id="i10" class="numeros" dropzone="copy"></div>
+                    <div id="i11" class="numeros" dropzone="copy"></div>
+                    </div>
+                </div>
+                <div id="imgNumeros">
+                    <img id="zero" class="numero" draggable="true" src="imagens/zero.png" alt="">
+                    <img id="um" class="numero" draggable="true" src="imagens/um.png" alt="">
+                    <img id="dois" class="numero" draggable="true" src="imagens/dois.png" alt="">
+                    <img id="tres" class="numero" draggable="true" src="imagens/tres.png" alt="">
+                    <img id="quatro"class="numero" draggable="true" src="imagens/quatro.png" alt="">
+                    <img id="cinco" class="numero" draggable="true" src="imagens/cinco.png" alt="">
+                    <img id="seis" class="numero" draggable="true" src="imagens/seis.png" alt="">
+                    <img id="sete" class="numero" draggable="true" src="imagens/sete.png" alt="">
+                    <img id="oito" class="numero" draggable="true" src="imagens/oito.png" alt="">
+                    <img  id="nove" class="numero" draggable="true" src="imagens/nove.png" alt="">
+                    <img  id="virgula" class="numero" draggable="true" src="imagens/virgula.png" alt="">
+                    <div  id="botao"><button id="limpar" onclick="limparDivisao()">LIMPAR</button></div>
+                </div>
+            </div>
+            <div id="col3">
+                <div id='linhaA' class="col3LinhaNumeros"> 
+                    <div id="col3a1" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3a2" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3a3" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3a4" class="numerosCol3" dropzone="copy"></div>                    
+                </div>
+                 <div class="col3LinhaNumeros"> 
+                    <div id="col3b1" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3b2" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3b3" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3b4" class="numerosCol3" dropzone="copy"></div>                    
+                </div> 
+                 <div class="col3LinhaNumeros"> 
+                    <div id="col3c1" class="numerosCol3" dropzone="copy">X</div>
+                    <div id="col3c2" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3c3" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3c4" class="numerosCol3" dropzone="copy"></div>                    
+                </div> 
+                 <div id="linhaD" class="col3LinhaNumeros"> 
+                    <div id="col3d1" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3d2" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3d3" class="numerosCol3" dropzone="copy"></div>
+                    <div id="col3d4" class="numerosCol3" dropzone="copy"></div>                    
+                </div> 
+                <div id="imgNumerosCol3">
+                    <img id="zeroCol3" class="numeroCol3" draggable="true" src="imagens/zero.png" alt="">
+                    <img id="umCol3" class="numeroCol3" draggable="true" src="imagens/um.png" alt="">
+                    <img id="doisCol3" class="numeroCol3" draggable="true" src="imagens/dois.png" alt="">
+                    <img id="tresCol3" class="numeroCol3" draggable="true" src="imagens/tres.png" alt="">
+                    <img id="quatroCol3"class="numeroCol3" draggable="true" src="imagens/quatro.png" alt="">
+                    <img id="cincoCol3" class="numeroCol3" draggable="true" src="imagens/cinco.png" alt="">
+                    <img id="seisCol3" class="numeroCol3" draggable="true" src="imagens/seis.png" alt="">
+                    <img id="seteCol3" class="numeroCol3" draggable="true" src="imagens/sete.png" alt="">
+                    <img id="oitoCol3" class="numeroCol3" draggable="true" src="imagens/oito.png" alt="">
+                    <img  id="noveCol3" class="numeroCol3" draggable="true" src="imagens/nove.png" alt="">
+                    <div  id="botaoCol3"><button id="limparCol3" onclick="limparMultiplicacao()">LIMPAR</button></div>
+                </div>                                        
+            </div>
+            </div>   
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Desenvolvido por Marcos Oliveira</p>
+    </footer>
+    <script src="scripts/divisao-quociente-decimal1.js"></script>
+</body>
+</html>

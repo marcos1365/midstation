@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMÓRIA ATÉ 5</title>
+    <link rel="stylesheet" href="css/venceu-modal.css">
+    <link rel="stylesheet" href="css/memoria-ate5.css">
+    <link rel="stylesheet" href="css/menu-superior.css">
+    <link rel="shortcut icon" href="../imagens/favicon.ico">
+    <!--
+    <style>
+        body{
+            background:rgb(57,57,57);
+        }
+        header{
+            text-align: center;
+            color: grey;
+        }
+        section{
+            background: rgb(80,80,80);
+            width:756px;
+            margin: auto; /*centralizar*/
+            box-shadow: 3px 3px 5px rgba(0,0,0,363);
+            border-radius: 10px;
+        }
+        div{
+            text-align: justify;
+        }
+        img{
+            width:138px;
+            height: 200px; 
+            padding: 5px;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        img:hover{
+            transform: scale(1.1);           
+        }
+        footer{
+            text-align: center;
+            color: grey;
+        }
+    </style>
+    -->
+</head>
+<body>
+    <div id='bgmodal'>
+        <div id='modal'>
+            <div id="divtitulo"><h2 id="titulo">PARABÉNS! VOCÊ VENCEU!</h2></div>
+            <div id="imagem"><img id="trofeu" src="imagens/trofeu.png" alt="troféu"></div>
+            <div id="links">
+                <a id="voltar"  href="../index.html"><img class="linkmodal" src="imagens/voltar.png" alt="INÍCIO"><p>INÍCIO</p></a>
+                <a id="atualizar"  href="memoria-ate5.html"><img class="linkmodal" src="imagens/atualizar.png" alt="REPETIR"><p>REFAZER</p></a>
+                <a id="avancar" href="escrever-numeros-ate5.html"><img class="linkmodal" class="linkmodal" src="imagens/avancar.png" alt="PRÓXIMA"><p>PRÓXIMA</p></a>
+            </div>
+        </div>
+    </div>
+    <header> 
+        <div id="menu-principal">
+           
+            <div id="menu-esquerda">
+                <h2>  <a href="../index.html">
+                    <div class="mid"><div id="mid">MID</div> STATION</div></a>
+                </h2>
+            </div>
+            <div id="menu-direita">
+                <nav id="menu">
+                   <div class="menu"> 
+                        <div id="ei" class="menu"><a href="#">EDUCAÇÃO INFANTIL</a></div>
+                        <div id="primeiro" class="menu"  ><a href="#">1º ANO</a></div>
+                        <div id="segundo"  class="menu" ><a href="#">2º ANO</a></div>
+                        <div id="terceiro"  class="menu" ><a href="#">3º ANO</a></div>
+                        <div id="quarto"  class="menu" ><a href="#">4º ANO</a></div>
+                        <div id="quinto" class="menu"  ><a href="#">5º ANO</a></div>
+                    
+                   </div>
+                </nav>
+            </div>
+            
+        </div>
+    </header>
+    <p id="descricao">MEMÓRIA ATÉ 5</p>
+    <section class="conteudo">
+    <div class="linha">
+        <img id="imagem0" class="coluna" src="imagens/numeros.jpg"/><img id="imagem1" class="coluna" src="imagens/numeros.jpg"/>
+        <img id="imagem2" class="coluna" src="imagens/numeros.jpg"/><img id="imagem3" class="coluna" src="imagens/numeros.jpg"/>
+        <img id="imagem4" class="coluna"src="imagens/numeros.jpg"/><img id="imagem5" class="coluna"  src="imagens/numeros.jpg"/>
+        <img id="imagem6" class="coluna" src="imagens/numeros.jpg"/><img id="imagem7" class="coluna" src="imagens/numeros.jpg"/>
+        <img id="imagem8" class="coluna" src="imagens/numeros.jpg"/><img id="imagem9" class="coluna" src="imagens/numeros.jpg"/>
+        
+    </div> 
+    </section>
+    <footer>
+        <p>&copy; Desenvolvido por Marcos Oliveira</p>
+    </footer>
+    <script>
+        var posicao= [0,0,0,0,0,0,0,0,0,0];
+        var conteudo=[1,1,2,2,3,3,4,4,5,5];
+        var estado=[0,0,0,0,0,0,0,0,0,0];
+        var sorteado;
+        var acertos=0
+        for(var x=0;x<10;x++){
+            sorteado=Number.parseInt(Math.random()*(10-x));
+            posicao[x]=conteudo[sorteado];
+            conteudo.splice(sorteado,1);
+        } 
+        //window.document.write(`${posicao}`)
+        var i=window.document.getElementById('imagem0');
+        var i0=window.document.getElementById('imagem0');
+        var i1=window.document.getElementById('imagem1');
+        var i2=window.document.getElementById('imagem2');
+        var i3=window.document.getElementById('imagem3');
+        var i4=window.document.getElementById('imagem4');
+        var i5=window.document.getElementById('imagem5');
+        var i6=window.document.getElementById('imagem6');
+        var i7=window.document.getElementById('imagem7');
+        var i8=window.document.getElementById('imagem8');
+        var i9=window.document.getElementById('imagem9');
+        var bgmodal=window.document.getElementById('bgmodal')
+        var titulo=window.document.getElementById('titulo')
+
+        i0.addEventListener('click', clicar0);
+        i1.addEventListener('click', clicar1);
+        i2.addEventListener('click', clicar2);
+        i3.addEventListener('click', clicar3);
+        i4.addEventListener('click', clicar4);
+        i5.addEventListener('click', clicar5);
+        i6.addEventListener('click', clicar6);
+        i7.addEventListener('click', clicar7);
+        i8.addEventListener('click', clicar8);
+        i9.addEventListener('click', clicar9);
+        window.setInterval(verificar,4000)
+        function clicar0(){ 
+            verificar()
+            if(posicao[0]===1){
+                i0.src="imagens/um.png" 
+            }else
+            if(posicao[0]===2){
+                i0.src="imagens/dois.png" 
+            }else
+            if(posicao[0]===3){
+                i0.src="imagens/tres.png" 
+            }else
+            if(posicao[0]===4){
+                i0.src="imagens/quatro.png" 
+            }else
+            if(posicao[0]===5){
+                i0.src="imagens/cinco.png"
+            }
+            estado[0]=1
+            comparar(0)
+        }
+        function clicar1(){
+            verificar()
+            if(posicao[1]===1){
+                i1.src="imagens/um.png" 
+            }else
+            if(posicao[1]===2){
+                i1.src="imagens/dois.png" 
+            }else
+            if(posicao[1]===3){
+                i1.src="imagens/tres.png" 
+            }else
+            if(posicao[1]===4){
+                i1.src="imagens/quatro.png" 
+            }else
+            if(posicao[1]===5){
+                i1.src="imagens/cinco.png"
+            }
+            estado[1]=1
+            comparar(1)
+        }
+        function clicar2(){
+            verificar()
+            if(posicao[2]===1){
+                i2.src="imagens/um.png" 
+            }else
+            if(posicao[2]===2){
+                i2.src="imagens/dois.png" 
+            }else
+            if(posicao[2]===3){
+                i2.src="imagens/tres.png" 
+            }else
+            if(posicao[2]===4){
+                i2.src="imagens/quatro.png" 
+            }else
+            if(posicao[2]===5){
+                i2.src="imagens/cinco.png"
+            }
+            estado[2]=1
+            comparar(2)
+        }
+        function clicar3(){
+            verificar()
+            if(posicao[3]===1){
+                i3.src="imagens/um.png" 
+            }else
+            if(posicao[3]===2){
+                i3.src="imagens/dois.png" 
+            }else
+            if(posicao[3]===3){
+                i3.src="imagens/tres.png" 
+            }else
+            if(posicao[3]===4){
+                i3.src="imagens/quatro.png" 
+            }else
+            if(posicao[3]===5){
+                i3.src="imagens/cinco.png"
+            }
+            estado[3]=1;
+            comparar(3)
+        }
+        function clicar4(){
+            verificar()
+            if(posicao[4]===1){
+                i4.src="imagens/um.png" 
+            }else
+            if(posicao[4]===2){
+                i4.src="imagens/dois.png" 
+            }else
+            if(posicao[4]===3){
+                i4.src="imagens/tres.png" 
+            }else
+            if(posicao[4]===4){
+                i4.src="imagens/quatro.png" 
+            }else
+            if(posicao[4]===5){
+                i4.src="imagens/cinco.png"
+            }
+            estado[4]=1
+            comparar(4)
+        }
+        function clicar5(){
+            verificar()
+            if(posicao[5]===1){
+                i5.src="imagens/um.png" 
+            }else
+            if(posicao[5]===2){
+                i5.src="imagens/dois.png" 
+            }else
+            if(posicao[5]===3){
+                i5.src="imagens/tres.png" 
+            }else
+            if(posicao[5]===4){
+                i5.src="imagens/quatro.png" 
+            }else
+            if(posicao[5]===5){
+                i5.src="imagens/cinco.png"
+            }
+            estado[5]=1;
+            comparar(5);
+        }
+        function clicar6(){
+            verificar()
+            if(posicao[6]===1){
+                i6.src="imagens/um.png" 
+            }else
+            if(posicao[6]===2){
+                i6.src="imagens/dois.png" 
+            }else
+            if(posicao[6]===3){
+                i6.src="imagens/tres.png" 
+            }else
+            if(posicao[6]===4){
+                i6.src="imagens/quatro.png" 
+            }else
+            if(posicao[6]===5){
+                i6.src="imagens/cinco.png"
+            }
+            estado[6]=1;
+            comparar(6);
+        }
+        function clicar7(){
+            verificar()
+            if(posicao[7]===1){
+                i7.src="imagens/um.png" 
+            }else
+            if(posicao[7]===2){
+                i7.src="imagens/dois.png" 
+            }else
+            if(posicao[7]===3){
+                i7.src="imagens/tres.png" 
+            }else
+            if(posicao[7]===4){
+                i7.src="imagens/quatro.png" 
+            }else
+            if(posicao[7]===5){
+                i7.src="imagens/cinco.png"
+            }
+            estado[7]=1;
+            comparar(7);
+        }
+        function clicar8(){
+            verificar()
+            if(posicao[8]===1){
+                i8.src="imagens/um.png" 
+            }else
+            if(posicao[8]===2){
+                i8.src="imagens/dois.png" 
+            }else
+            if(posicao[8]===3){
+                i8.src="imagens/tres.png" 
+            }else
+            if(posicao[8]===4){
+                i8.src="imagens/quatro.png" 
+            }else
+            if(posicao[8]===5){
+                i8.src="imagens/cinco.png"
+            }
+            estado[8]=1;
+            comparar(8);
+        }
+        function clicar9(){
+            verificar()
+            if(posicao[9]===1){
+                i9.src="imagens/um.png" 
+            }else
+            if(posicao[9]===2){
+                i9.src="imagens/dois.png" 
+            }else
+            if(posicao[9]===3){
+                i9.src="imagens/tres.png" 
+            }else
+            if(posicao[9]===4){
+                i9.src="imagens/quatro.png" 
+            }else
+            if(posicao[9]===5){
+                i9.src="imagens/cinco.png"
+            }
+            estado[9]=1;
+            comparar(9);
+            
+        }
+        function comparar(atual){
+            for(var x=0;x<10;x++){
+                if(estado[x]===1 && estado[atual]===1 && x!=atual && posicao[x]===posicao[atual]){
+                    //window.alert("Posição de X: "+x+" "+estado[x]+" e Atual: "+atual) 
+                    if(x===0){
+                       //i0.style.display='none'
+                       i0.removeEventListener('click',clicar0)
+                        estado[x]=0
+                        
+                    }else
+                    if(x===1){
+                       //i1.style.display='none'
+                       i1.removeEventListener('click',clicar1)
+                        estado[x]=0 
+                        
+                    }else
+                    if(x===2){
+                        //i2.style.display='none'
+                        i2.removeEventListener('click',clicar2)
+                        estado[x]=0 
+                         
+                    }else
+                    if(x===3){
+                        //i3.style.display='none'
+                        i3.removeEventListener('click',clicar3)
+                        estado[x]=0 
+                        
+                    }else
+                    if(x===4){
+                        //i4.style.display='none'
+                        i4.removeEventListener('click',clicar4)
+                        estado[x]=0 
+                        
+                    }else
+                    if(x===5){
+                        //i5.style.display='none'
+                        i5.removeEventListener('click',clicar5)
+                        estado[x]=0 
+                        
+                    }else
+                    if(x===6){
+                        //i6.style.display='none'
+                        i6.removeEventListener('click',clicar6)
+                        estado[x]=0 
+                       
+                    }else
+                    if(x===7){
+                        //i7.style.display='none'
+                        i7.removeEventListener('click',clicar7)
+                        estado[x]=0 
+                        
+                    }else
+                    if(x===8){
+                        //i8.style.display='none'
+                        i8.removeEventListener('click',clicar8)
+                        estado[x]=0 
+                        
+                    }else
+                    if(x===9){
+                        //i9.style.display='none'
+                        i9.removeEventListener('click',clicar9)
+                        estado[x]=0 
+                       
+                    }
+                    //Atual
+                    if(atual===0){
+                        //i0.style.display='none'
+                        i0.removeEventListener('click',clicar0)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }else
+                    if(atual===1){
+                        //i1.style.display='none'
+                        i1.removeEventListener('click',clicar1)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }else
+                    if(atual===2){
+                        //i2.style.display='none'
+                        i2.removeEventListener('click',clicar2)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }else
+                    if(atual===3){
+                        //i3.style.display='none'
+                        i3.removeEventListener('click',clicar3)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }else
+                    if(atual===4){
+                        //i4.style.display='none'
+                        i4.removeEventListener('click',clicar4)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }else
+                    if(atual===5){
+                        //i5.style.display='none'
+                        i5.removeEventListener('click',clicar5)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }else
+                    if(atual===6){
+                        //i6.style.display='none'
+                        i6.removeEventListener('click',clicar6)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }else
+                    if(atual===7){
+                        //i7.style.display='none'
+                        i7.removeEventListener('click',clicar7)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }else
+                    if(atual===8){
+                        //i8.style.display='none'
+                        i8.removeEventListener('click',clicar8)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }else
+                    if(atual===9){
+                        //i9.style.display='none'
+                        i9.removeEventListener('click',clicar9)
+                        estado[atual]=0 
+                        acertos+=1 
+                    }  //window.alert("Posição de X: "+x+" "+estado[x]+" e Atual: "+atual)          
+                }
+            }
+            
+            if(acertos==5){
+                bgmodal.style.display='block'
+                titulo.style.textAlign='center'
+            }    
+        } 
+        function verificar(){
+            for(var x=0;x<10;x++){
+                for(var y=0;y<10;y++){
+                    if(estado[x]===1 && estado[y]===1 && x!=y && posicao[x]!=posicao[y]){
+                        //window.alert("Posição de X: "+x+" "+estado[x]+" e Y: "+y)  
+                        
+                        viraXY(x,y)
+                        
+                                 
+                    }    
+                }
+                 
+            }
+            
+        }
+        function viraXY(a,b){
+            viraX(a)
+            viraY(b)
+        }
+        function viraX(x){
+            if(x===0){
+                        i0.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }else
+                        if(x===1){
+                        i1.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }else
+                        if(x===2){
+                        i2.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }else
+                        if(x===3){
+                        i3.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }else
+                        if(x===4){
+                        i4.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }else
+                        if(x===5){
+                        i5.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }else
+                        if(x===6){
+                        i6.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }else
+                        if(x===7){
+                        i7.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }else
+                        if(x===8){
+                        i8.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }else
+                        if(x===9){
+                        i9.src="imagens/numeros.jpg"
+                        estado[x]=0
+                        }
+        }
+        function viraY(y){
+            if(y===0){
+                        i0.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }else
+                        if(y===1){
+                        i1.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }else                        
+                        if(y===2){
+                        i2.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }else
+                        if(y===3){
+                        i3.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }else
+                        if(y===4){
+                        i4.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }else
+                        if(y===5){
+                        i5.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }else
+                        if(y===6){
+                        i6.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }else
+                        if(y===7){
+                        i7.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }else
+                        if(y===8){
+                        i8.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }else
+                        if(y===9){
+                        i9.src="imagens/numeros.jpg"
+                        estado[y]=0 
+                        }
+        }
+    </script>
+</body>
+</html>

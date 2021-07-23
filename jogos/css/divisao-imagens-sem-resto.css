@@ -1,0 +1,178 @@
+
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+}
+ div#linha{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+    /*COLUNA 1*/
+    div#col1{
+        display: flexbox;
+        background: rgb(179, 122, 104);
+        width: 400px;
+    }
+        div#estrelas{
+            background: burlywood;
+            font-size: 20pt;
+            color: black;
+            height: 40px;
+            display: flex;
+            flex-direction: column; /*Alinhamento vertical*/
+            justify-content: flex-end; /*Alinhamento vertical*/
+            text-align: center; /*Alinhamento vertical*/    
+        }
+        div#conta{
+            
+            display: flex;
+            /*flex-direction: row; */
+            justify-content: center; 
+            font-size: 30pt;
+            padding-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+            div#contaCol1{
+                display: flex;
+                justify-content: center;
+            }
+
+        div#resposta{
+            text-align: center;
+            padding-top: 3px;
+        }
+            input#resposta{
+                text-align: end;
+                font-size: 30pt;
+                border-radius: 5px;
+                height: 40px;
+                width: 120px;
+            }
+        div#verificar{
+            padding-top: 70px;
+            text-align: center;
+
+        }
+        button#verif{
+            background-color: rgb(130, 171, 248);
+            border-radius: 5px;
+        }
+        div#resultado{
+            padding-top: 50px;
+            text-align: center;
+        }
+        div#respostaCerta{
+            text-align: center;
+        }
+        div#errosAcertos{
+            display: flex;
+            justify-content: space-between;
+            font-size: 10pt;
+            padding-top: 100px;
+            
+        }
+        #erros{margin-left: 2%;}
+        #acertos{margin-right: 2%;}
+    
+/*COLUNA 2*/
+    div#col2{
+        background: rgb(104, 128, 179);
+        width: 600px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+div.criancas{
+    
+    border: solid rgb(104, 128, 179);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+div.numeroCrianca{
+    width: 80px;
+    height: 170px;
+    border: solid;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+p.criancas{
+    text-align: center;
+    font-size: 12pt;
+    margin-top: 0px;
+}
+
+div.resto{
+    height: 50px;
+    width: 65%;
+    border: solid rgb(104, 128, 179);
+    margin-top: 0px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+p.resto{
+    text-align: center;
+    font-size: 12pt;
+    margin-top: 0px;
+}
+div.macas{
+    height: 70px;
+    width: 65%;
+    border: solid rgb(104, 128, 179);
+    margin-top: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.macas{
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+button#limpar{
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(130, 171, 248);
+    border-radius: 5px;
+}
+div#botao{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/*Moblile*/
+    @media(max-width:1300px){
+        div#modal{width:80%;}        
+        div#estrelas{font-size: 15pt;height: 30px;}
+        section.conteudo{width: 90%;}
+        div.numeroCrianca{display: flex;flex-flow:row wrap; justify-content:center;}
+        div.macas{width: 90%;}
+        img.macas{height: 20px;}
+    }
+
+footer{
+    color: white;
+    text-align: center;
+}

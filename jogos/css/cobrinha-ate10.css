@@ -1,0 +1,95 @@
+
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+
+}
+
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+    display: flex;
+    justify-content: center;
+}
+/*COLUNA 1*/
+    div#linha{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 410px;
+    }
+    div#col1{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        background: rgb(179, 122, 104);
+        width: 400px;
+        
+    }
+    
+    div#numeros{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        width: 400px;
+    }
+    img.img-numero{
+        height: 40px;
+        opacity: 0.4;
+        filter: grayscale(90%);
+        transition: all 0.5s;
+        
+    }
+    #dois,#cinco,#oito,#nove{
+        opacity: 0.1;
+        filter: grayscale(90%);
+    }
+    div#controles{display: none;}
+    @media(max-width:800px){
+        div#modal{width:80%;}
+        section.conteudo{width: 90%;}
+        
+        div#col1{width: 300px;}
+        #stage{width: 300px;}
+        div#numeros{width: 300px;}
+        img.img-numero{height: 20px;}
+        div#controles{
+            display: block;
+            width: 300px;
+            margin-top: 5px;
+        }
+        div#cima{
+            display: flex;
+            justify-content: center;
+        }
+        div.cima{border: solid; border-radius: 5px; padding: 10px;}
+        div#meio{
+            display: flex;
+            justify-content: space-around;
+        }
+        div#esquerda{border: solid; border-radius: 5px; padding: 10px;}
+        div#direita{border: solid; border-radius: 5px; padding: 10px; }
+        div#baixo{
+            display: flex;
+            justify-content: center;
+        }
+        div.baixo{border: solid; border-radius: 5px; padding: 10px; }
+        #esquerda,#direita,.cima,.baixo{
+            background-color: gray;
+            box-shadow: 3px 3px 10px rgba(0,0,0,363);
+        }
+    }
+footer{
+    color: white;
+    text-align: center;
+}

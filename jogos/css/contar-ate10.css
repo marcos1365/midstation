@@ -1,0 +1,107 @@
+
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+    
+}
+/*COLUNA 1*/
+    div.linha{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+    }
+    div#col1{
+        display: flexbox;
+        background: rgb(179, 122, 104);
+        width: 100%;
+        
+        
+    }
+        div#estrelas{
+            background: burlywood;
+            font-size: 20pt;
+            color: black;
+            height: 40px;
+            display: flex;
+            flex-direction: column; /*Alinhamento vertical*/
+            justify-content: flex-end; /*Alinhamento vertical*/
+            text-align: center; /*Alinhamento vertical*/    
+        }
+        div#imagens{
+            height: 120px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        div#resultado{
+            height: 130px;
+            text-align: center;
+            
+        }
+        div#respostaCerta{
+            text-align: center;
+           
+            
+        }
+        div#numeros{ 
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+        div#errosAcertos{
+            display: flex;
+            justify-content: space-between;
+            font-size: 10pt;
+        }
+        #erros{margin-left: 2%;}
+        #acertos{margin-right: 2%;}
+
+
+    img.imagens{
+        margin-top: 20px;
+        /*height: 70px;*/
+        max-height: 110px;
+        width: 90px;
+    }
+    img.resultado{
+        height: 100px;
+        
+    }
+    img.numero{
+        height: 80px;
+        padding-top: 5px;
+    }
+    img.numero:hover{transform: scale(1.2);}
+    @media(max-width:1300px){
+        div#estrelas{font-size: 15pt;height: 30px;}
+        
+        img.imagens{height: 50px;max-width: 40px; padding-left: 5px;padding-right: 5px;}
+        img.numero{height: 40px;padding-left: 15px;padding-right: 15px;}
+        section.conteudo{width: 90%;}
+        div#modal{width:80%;}
+        /*img#nove{position: absolute;} */
+    }
+footer{
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,127 @@
+
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+    
+}
+/*COLUNA 1*/
+div.linha{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+div#col1{
+    display: flexbox;
+    background: #b37a68;
+    width: 100%;
+    
+    
+}
+div#encaixes{ /*1*/
+    display: flex;
+    justify-content: center;  
+}
+div#esquerda-cima-encaixe, div#direita-baixo-encaixe{/*2*/
+    width: 530px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid rgba(54, 54, 54, 1);
+    background: rgba(54, 54, 54, 1);
+}
+div.formas-encaixe{ /*3*/
+    background: rgba(54, 54, 54, 1);
+}
+img.encaixe{ /*4*/
+    margin: 5px;
+    height: 60px; 
+}
+
+div#formas{/*1*/
+    display: flex;
+    justify-content: center;
+}
+div#esquerda-cima-forma, div#direita-baixo-forma{ /*2*/
+    width: 530px;
+    margin-top: 100px; margin-bottom: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid rgba(54, 54, 54, 1);
+    background: rgba(54, 54, 54, 1);
+}
+div.formas{ /*3*/
+    background: rgba(54, 54, 54, 1);
+}
+img.forma{/*4*/
+    margin: 5px;
+    height: 60px;
+}
+@media(max-width:800px){
+    section.conteudo{width: 90%;}
+    div#modal{width:80%;}
+    div#encaixes{
+        flex-flow: row wrap;
+    }
+    div#esquerda-cima-encaixe{
+        width: 300px;
+        margin-top: 10px; margin-bottom: 0px;
+        flex-wrap: wrap;
+    }
+    div#direita-baixo-encaixe{
+        width: 300px;
+        margin-top: 0px; margin-bottom: 50px;
+        flex-wrap: wrap;
+    }
+    /*div.formas-encaixe{border: solid; background-color: rgb(100, 100, 100);}*/
+    img.encaixe{
+        height:30px;
+    }
+    div#formas{
+        flex-flow: row wrap;
+        
+    }
+    div#esquerda-cima-forma{
+        width: 300px;
+        margin-top: 50px; margin-bottom: 0px;
+        flex-wrap: no-wrap;
+    }
+    div#direita-baixo-forma{
+        width: 300px;
+        margin-top: 0px; margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    div.formas{
+        border: solid rgba(54, 54, 54, 1);
+        background-color: rgba(54, 54, 54, 1);
+        margin-left: 0px;margin-right: 0px; margin-top: 5px; margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }  
+    img.forma{
+        height:30px;
+        margin: 2px;
+    }
+}
+footer{
+    color: white;
+    text-align: center;
+}

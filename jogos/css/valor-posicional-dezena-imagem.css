@@ -1,0 +1,154 @@
+
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+}
+/*COLUNA 1*/
+div#linha{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+div#col1{
+    display: flexbox;
+    justify-content: center;
+    background: rgb(179, 122, 104);
+    width: 600px;
+}
+div#estrelas{
+    background: burlywood;
+    font-size: 20pt;
+    color: black;
+    height: 40px;
+    display: flex;
+    flex-direction: column; /*Alinhamento vertical*/
+    justify-content: flex-end; /*Alinhamento vertical*/
+    text-align: center; /*Alinhamento vertical*/    
+}
+
+div#unidade-dezena{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+div#unidade-dezena-texto{
+    display: flex;
+    justify-content: center;
+}
+.imagens{
+    height: 100px;
+    width: 250px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    display: flex;
+    align-items: center;
+}
+#conteiner-dezena{
+    flex-direction: row-reverse;
+}
+div#resposta{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+div#verificar{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+button#verif{
+    background-color: rgb(130, 171, 248);
+    border-radius: 5px; 
+}
+div#resultado{
+    padding-top: 20px;
+    text-align: center;
+}
+div#respostaCerta{
+    text-align: center;
+}
+#material-dourado{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+img#dezena{
+    margin-right: 10px;
+    height: 100px;
+    width: 20px;
+    background-color: rgb(179, 122, 104); border:solid rgb(179, 122, 104); 
+}
+img#unidade{
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(179, 122, 104); border:solid rgb(179, 122, 104); 
+}
+.img-dezena{
+    margin-right: 5px;
+    height: 100px;
+    width: 20px;
+}
+.img-unidade{
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+}
+div#errosAcertos{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10pt;
+    margin-top: 10px;
+    
+}
+#erros{margin-left: 2%;}
+#acertos{margin-right: 2%;}
+
+@media(max-width:1300px){
+    section.conteudo{width: 90%;}
+    div#modal{width:80%;}
+    div#estrelas{font-size: 15pt;height: 30px;}
+    div#col1{ max-width: 340px; } 
+    .imagens{height: 60px;}
+    .img-dezena{width: 10px; height: 50px;}
+    .img-unidade{width: 10px; height: 10px;}
+    .texto{font-size: 15px; align-items: center;}
+    #limparDezena,#limparUnidade{font-size: 15px;}
+    #material-dourado{height: 60px;}
+    img#dezena{width: 10px; height: 50px;  margin-right: 50px; 
+        border:solid rgb(179, 122, 104) ; 
+        /*background-color: rgba(54, 54, 54,0.5); */
+        padding: 5px;
+    }
+    img#unidade{width: 10px; height: 10px; margin-left: 50px; 
+        border:solid rgb(179, 122, 104); 
+        /*background-color: rgba(54, 54, 54,0.5); */
+        background-color: rgb(179, 122, 104);
+        padding: 5px;
+    }
+    
+}
+footer{
+    color: white;
+    text-align: center;
+}

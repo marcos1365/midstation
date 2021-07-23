@@ -1,0 +1,189 @@
+
+/* MENU SUPERIOR*/
+*{font-family: sans-serif;}
+body{margin: 0px;}
+div#menu-principal{
+    position:relative;
+    background:#363636;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;  
+}
+div#menu-esquerda{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+div#mid{
+    display:inline-block;
+    padding: 4px;
+    background:	#DCDCDC;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+}
+div#menu-esquerda a{
+    text-decoration: none;
+    color:#DCDCDC;
+}
+div#menu-direita{
+    margin-top: -2px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+nav#menu div.menu{	
+    transition: background-color 3s;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+div.menu a{
+    color: #000000;
+    text-decoration: none;
+}
+    div#ei,#primeiro,#segundo, #terceiro, #quarto, #quinto{
+    background-color:#dddddd;
+    padding: 10px; 
+    margin-top: 2px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: background-color 1s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+    transition: all 0.5s;
+}
+div#ei:hover,#primeiro:hover,#segundo:hover, #terceiro:hover, #quarto:hover, #quinto:hover{transform: scale(1.5); }
+div#ei{background-color: #FEA651;}
+div#primeiro{background: #FFF882;}
+div#segundo{background: #FC5DFC;}
+div#terceiro{background: #44FC8B;}
+div#quarto{background: #8E51FC;}
+div#quinto{background:#5196FC;}
+
+div#ei:hover{background-color:#E63925;}
+div#primeiro:hover{background-color:#E63925;}
+div#segundo:hover{background-color:#E63925;}
+div#terceiro:hover{background-color:#E63925;}
+div#quarto:hover{background-color:#E63925;}
+div#quinto:hover{background-color:#E63925;}
+nav#menu div.menu a:hover{color: #ffffff;}
+@media(max-width:1300px){
+nav#menu div.menu{justify-content: space-around;}
+    div#ei,#primeiro,#segundo, #terceiro, #quarto, #quinto{
+        margin-left: 3px; 
+        margin-right: 3px;
+        padding: 6px;
+        box-shadow: 3px 3px 10px rgba(0,0,0,363);
+    }
+}
+
+/*CORPO*/
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; /*
+    background: rgb(125, 152, 235); */
+    font: normal 15pt Arial;
+}
+header{
+    color: white;
+    text-align: center;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+    margin-top: 40px;   
+}
+
+div.linha{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+    }
+div.coluna{
+    border-radius: 10px;
+    border: solid;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+li{
+    padding-bottom: 5px; margin-right: 5px;
+}
+div.coluna ul li{ transition: background-color 2s;}
+div.coluna ol li{ transition: background-color 2s;}
+
+div.coluna ul li:hover{ 
+    border-radius: 5px;
+    background-color: red;
+}
+div.coluna ol li:hover{ 
+    border-radius: 5px;
+    background-color: red;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: color 2s;
+}
+a:hover{
+    color: white;
+}
+
+#a{background-color: rgba(200,100,100,0.9);box-shadow: 3px 3px 10px rgba(0,0,0,363);}
+#b{background-color: rgba(200,200,100,0.9);box-shadow: 3px 3px 10px rgba(0,0,0,363);}
+#c{background-color: rgba(130,200,130,0.9);box-shadow: 3px 3px 10px rgba(0,0,0,363);}
+img.kids{
+    width: 200px;
+    
+    position: relative;
+    margin-top: -50%;
+    margin-bottom: 10%;
+    margin-left: 80px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+#qq{
+    margin-top: -60%;
+    margin-bottom: 10px;
+}
+img.letra{
+    width: 60px;
+    height: 100px;
+    position: relative;
+   
+    margin-top: -5%;
+    margin-left: 15px;
+    margin-right: auto;
+    margin-bottom: 0px; 
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 30pt;
+    margin-top: 5px;
+}
+hr{
+    margin-left: 0px;
+    border-color: rgba(54, 54, 54, 1);
+    background-color:rgba(54, 54, 54, 1) ;
+    border-radius: 2px;
+    width: 80%;
+}
+footer{
+    color: white;
+    text-align: center;
+}

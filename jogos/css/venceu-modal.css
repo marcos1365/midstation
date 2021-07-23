@@ -1,0 +1,31 @@
+/* DIV MODAL */
+div#bgmodal{
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+    opacity:1;
+    transition: opacity 400ms ease-in;
+    display: none;
+}
+
+div#modal{
+    width: 450px;
+    position: relative;
+    margin:5% auto;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 10px;
+    
+}
+div#divtitulo h2{text-align: center;}
+div#imagem{ display: flex;justify-content: center;}
+img#trofeu{width: 150px; height: 150px; padding-bottom: 30px;}
+div#links{display: flex; justify-content: space-between; padding-top: 30px;}
+.linkmodal{ width: 50px;height: 50px;}
+.linkmodal:hover{transform: scale(1.2); }
+#voltar,#atualizar,#avancar{text-decoration: none;font-size: 8pt;color: black; text-align: center;}
+

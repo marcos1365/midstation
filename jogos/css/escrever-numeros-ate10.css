@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Ruda&display=swap');
+/*CORPO */
+body{
+    background:linear-gradient(135deg, #3e8896 0%,#4c3bd1 100%)fixed; 
+    font: normal 15pt Arial;
+    font-family: 'Itim', cursive;
+    font-family: 'Ruda', sans-serif;
+}
+#canvas{
+    display: none;
+}
+p#descricao{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+section.conteudo{
+    background: rgba(54, 54, 54, 1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    margin: auto; /*centralizar*/
+    box-shadow: 3px 3px 10px rgba(0,0,0,363);
+    
+}
+/*COLUNA 1*/
+    div#linha{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+    }
+    div#col1{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        background: rgb(179, 122, 104);
+        width: 400px;
+    }
+    #tela{
+        border: solid;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    div#avancar-voltar{
+       display: flex;
+       flex-flow: row wrap;
+       justify-content: space-between; 
+       width: 380px;
+    } 
+    #botao-voltar,#botao-avancar{
+        height: 50px;
+        margin-left: 5px;
+        margin-right: 5px;
+        
+    }
+    #botao-voltar:hover{transform:scale(1.2)}
+    #botao-avancar:hover{transform: scale(1.2);}
+    
+    div#botao{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 0px;
+    }
+    button#limpar{
+        width: 90%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        background-color: rgb(130, 171, 248);
+        border-radius: 5px;
+    }
+    @media(max-width:1300px){
+        div#modal{width:80%;}
+        section.conteudo{width: 90%;}
+        
+        div#col1{width: 340px;}
+        #tela{width: 300px; display: none;}
+        #canvas{display: block; margin-top: 10px; margin-bottom: 10px;}
+        #botao-voltar,#botao-avancar{height:40px;}
+
+    }
+footer{
+    color: white;
+    text-align: center;
+}
