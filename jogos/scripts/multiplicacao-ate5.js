@@ -108,8 +108,10 @@ var mais=window.document.getElementById('mais')
 
 var resposta=window.document.getElementById('resposta')
 resposta.addEventListener('keydown', e=>{
-    if (e.code == "Enter"){ 
+    if (e.code == "Enter"){
+        
         verificar()
+        resposta.value=''
     } 
 })
 numeros.forEach(num=>{addEventListener('dragstart', e=>{e.dataTransfer.setData('text',e.target.id)}) })
@@ -151,6 +153,7 @@ function acertou(){
 function errou(){
     erros+=1
     acertos-=1
+    
     verif.setAttribute('disabled', true)
     window.document.getElementById('resposta').disabled=false
     resultado.innerHTML=`ERROU!`
