@@ -181,6 +181,7 @@ var noveCol3=window.document.getElementById('noveCol3')
 resposta.addEventListener('keydown', e=>{
     if (e.code == "Enter"){ 
         verificar()
+        resposta.value=''
     } 
 })
 numeros.forEach(num=>{
