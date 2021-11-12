@@ -107,6 +107,7 @@ var resposta=window.document.getElementById('resposta')
 resposta.addEventListener('keydown', e=>{
     if (e.code == "Enter"){ 
         verificar()
+        resposta.value=''
     } 
 })
 numeros.forEach(num=>{
